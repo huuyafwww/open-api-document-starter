@@ -1,0 +1,24 @@
+get:
+  tags:
+  - "user"
+  summary: "Get Users"
+  description: "Get Users"
+  operationId: "getUsers"
+  consumes:
+  - "application/json"
+  produces:
+  - "application/json"
+  responses:
+    '200':
+      description: Success get users.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                $ref: "#/components/schemas/Status"
+              users:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"

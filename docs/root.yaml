@@ -1,0 +1,23 @@
+openapi: 3.0.0
+info:
+  description: |
+    This is a open-api-document-starter.
+  version: "1.0.0"
+  title: "API Document"
+  termsOfService: "https://example.com"
+servers:
+  - url: https://example.com/api/
+    description: Production environment
+  - url: https://stg.example.com/api/
+    description: Staging environment
+  - url: https://example.com:8080/api/
+    description: Local environment
+host: "example.com:8080"
+basePath: "/api"
+schemes: "https"
+$ref: ./tags/index.yaml
+paths:
+  $ref: ./paths/index.yaml
+components:
+  $ref: ./components/index.yaml
+

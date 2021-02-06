@@ -1,0 +1,17 @@
+type: object
+properties:
+  id:
+    type: integer
+    description: user_id
+  icon_url:
+    type: string
+    nullable: true
+    description: |
+      User profile icon url.
+      If null, no profile icon is set.
+  name:
+    type: string
+    description: User name.
+  email:
+    type: string
+    description: User mail address.

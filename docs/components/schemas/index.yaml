@@ -1,0 +1,4 @@
+Status:
+  $ref: ./status/index.yaml
+User:
+  $ref: ./user/index.yaml

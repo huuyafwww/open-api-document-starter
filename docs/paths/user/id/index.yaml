@@ -1,0 +1,42 @@
+get:
+  tags:
+  - "user"
+  summary: "get user"
+  description: "get user"
+  operationId: "getUser"
+  consumes:
+  - "application/json"
+  produces:
+  - "application/json"
+  responses:
+    '200':
+      description: Success get user.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                $ref: "#/components/schemas/Status"
+              user:
+                $ref: "#/components/schemas/User"
+put:
+  tags:
+  - "user"
+  summary: "edit user"
+  description: "edit user"
+  operationId: "putUser"
+  consumes:
+  - "application/json"
+  produces:
+  - "application/json"
+  responses:
+    '200':
+      description: Success edit user.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                $ref: "#/components/schemas/Status"

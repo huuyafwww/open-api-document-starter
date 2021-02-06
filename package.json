@@ -1,0 +1,25 @@
+{
+  "author": "huuyafwww",
+  "name": "open-api-document-starter",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "This is a open api document starter!",
+  "scripts": {
+    "watch": "onchange './docs/**/*.yaml' -- yarn build",
+    "build": "yarn merge && yarn export",
+    "merge": "swagger-merger -i ./docs/root.yaml -o ./public/yaml/api-document.yaml",
+    "export": "redoc-cli bundle ./public/yaml/api-document.yaml --output ./public/html/api-document.html --options.theme.colors.primary.main=#E64A19 --options.nativeScrollbars --options.hideDownloadButton"
+  },
+  "devDependencies": {
+    "husky": "^4.3.8",
+    "onchange": "^7.1.0",
+    "redoc-cli": "^0.10.3",
+    "swagger-merger": "^1.4.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build"
+    }
+  },
+  "private": false
+}
